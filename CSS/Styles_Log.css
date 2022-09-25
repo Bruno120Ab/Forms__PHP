@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --font-loby: 'Poppins', sans-serif;
+    
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-loby);
+
+}
+input{
+    padding: 4px;
+    font-size: 0.7em;
+}
+body{
+    background-color: black;
+    color: whitesmoke;
+    
+
+}
+.site{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr  ;
+    grid-template-areas:
+        "login img"
+        
+    ; 
+    height: 100vh;
+    background-color: white;
+    background: linear-gradient(to bottom ,#8AB8F1, #A8E5BA );
+}
+.login{
+    grid-area: login;
+    
+    display: flex;
+    justify-content: right;
+    align-items: center;
+     
+}
+
+.box-login{
+    width: 320px;
+    height: 500px;
+    background: linear-gradient(to top , #77D692 ,#7AD5FB );
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    
+    
+}
+.box-login h2{
+    padding-bottom: 2rem;
+    text-align: left;
+    font-family: var(--font-loby);
+    font-weight: bolder;
+}
+.imagem-login{
+    grid-area: img;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    
+}
+.imagem-login>img{
+    
+    padding: 49px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+.input-field input{
+    outline: none;
+    font-size: 0.9rem;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    height: 2.2rem;
+    width: 16rem;
+
+}
+form input[type="submit"]{
+    outline: none;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    background: #2A0752;
+    color: whitesmoke;
+    margin-bottom: 1rem;
+    font-weight: bolder;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+form input[type="password"]{
+    margin-bottom: 4rem;
+}
+#btn2{
+    background: none;
+    border: solid 2px ;
+}
+.cadastro{
+    background: none;
+    border: solid 2px purple;
+    text-decoration: none;
+    text-align: center;
+    color: #2A0752;
+    padding: 0.7em;
+    font-weight: bolder;
+    font-size: 1.1em;
+    border-radius: 3px;
+    cursor: pointer;
+    animation: hover01 3.5s ease-out;  
+}
+.cadastro:hover{
+    background: none;
+  
+    text-decoration: none;
+    color: #2A0752;
+    padding: 0.7em;
+    font-weight: bolder;
+    font-size: 1.1em;
+    border-radius: 3px;
+    cursor: pointer;
+}
+--root{
+    --cor-giro: #92f1ce;
+    --cor-parada: #2c483e;
+}
+.titleBtn{
+    flex-direction: row;
+}
+#box.animar{
+    animation: hover01 3.5s ease-out;  
+   
+    
+}
+@keyframes forms {
+    to{
+       transform: translateX(100deg);
+    }
+}
+@keyframes hover01 {
+   
+    from{
+        border-color: #92f1ce ;
+        border-style: solid;
+        border-width: 3px;
+   }
+    to{
+        border-color: purple ;
+        border-style: solid;
+        border-width: 3px;
+  
+}
+}
+@media (max-width:750px){
+    .site{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .imagem-login{
+        display: none;
+    }
+}
